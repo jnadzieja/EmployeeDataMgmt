@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <!-- Required Meta Tags -->
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+
+  <!-- Title of Document (Tab) -->
+  <title>Employee Data Management</title>
+
+  <!-- Bootstrap, Fontawesome, and my personal CSS Links respectively -->
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'
+        integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO'
+        crossorigin='anonymous'>
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'
+        integrity='sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU'
+        crossorigin='anonymous'>
+  <link rel='stylesheet' type='text/css' href='style.css'>
+
+  <!-- Link for Google Fonts -->
+
+  <!-- Link to Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+
+  <!-- Moment.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="jumbotron mx-auto text-center text-light mb-3" style="background: #232323;">
+        <span style="font-size: 62px;">Employee Data Management</span> <br>
+        <span style="font-size: 24px;">A comprehensive directory of employee billable hours</span>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header text-light" style="background: #2c4d95;">
+          Current Employees
+        </div>
+        <div class="card-body">
+          <table class="table">
+            <thead>
+            <tr>
+              <th scope="col">Employee Name</th>
+              <th scope="col">Role</th>
+              <th scope="col">Start Date</th>
+              <th scope="col">Monthly Rate ($)</th>
+              <th scope="col">Months Worked</th>
+              <th scope="col">Total Billed ($)</th>
+            </tr>
+            </thead>
+            <tbody id="newInfo">
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header text-light" style="background: #2c4d95;">
+          Featured
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+              <label for="employeeNameInput" style="font-weight: bold;">Employee Name</label>
+              <input type="text" class="form-control shadow-sm" id="employeeNameInput" placeholder="John Doe">
+            </div>
+            <div class="form-group">
+              <label for="roleInput" style="font-weight: bold;">Role/Title</label>
+              <input type="text" class="form-control shadow-sm" id="roleInput" placeholder="Senior Web Developer">
+            </div>
+            <div class="form-group">
+              <label for="startDateInput" style="font-weight: bold;">Start Date</label>
+              <input type="text" class="form-control shadow-sm" id="startDateInput" placeholder="MM/DD/YYYY">
+            </div>
+            <div class="form-group">
+              <label for="monthlyRateInput" style="font-weight: bold;">Monthly Rate ($)</label>
+              <input type="text" class="form-control shadow-sm" id="monthlyRateInput" placeholder="ex: 5000">
+            </div>
+            <div>
+              <button type="submit" style="background: #2c4d95;" class="btn text-light" id="formSubmitButton">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Javascript/jQuery links -->
+<script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8='
+        crossorigin='anonymous'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'
+        integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49'
+        crossorigin='anonymous'></script>
+<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'
+        integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy'
+        crossorigin='anonymous'></script>
+<script src='app.js'></script>
+</body>
+
+</html>
